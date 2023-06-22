@@ -1,6 +1,8 @@
+"use client";
+
 import { useState } from "react";
 
-export default function Counter() {
+export default function Counter({ children }: { children?: React.ReactNode }) {
   const [count, setCount] = useState(0);
 
   return (
@@ -12,6 +14,7 @@ export default function Counter() {
         Increment
       </button>
       <p className="text-gray-700">{count}</p>
+      {children}
     </>
   );
 }
